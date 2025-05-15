@@ -1,0 +1,7 @@
+platform :ios, '13.0'
+use_frameworks!
+
+target 'qrcodeswift' do
+  pod 'QRCodeReader.swift', '~> 10.0'
+end
+

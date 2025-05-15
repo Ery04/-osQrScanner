@@ -1,0 +1,6 @@
+framework module Pods_qrcodeswift {
+  umbrella header "Pods-qrcodeswift-umbrella.h"
+
+  export *
+  module * { export * }
+}
