@@ -36,7 +36,7 @@ class ViewController: UIViewController, QRCodeReaderViewControllerDelegate, CNCo
     
     @objc func startScanning() {
         readerVC.delegate = self
-        readerVC.modalPresentationStyle = .fullScreen // Tam ekran yapıyoruz
+        readerVC.modalPresentationStyle = .fullScreen 
         present(readerVC, animated: true)
     }
 
