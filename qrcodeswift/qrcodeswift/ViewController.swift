@@ -33,7 +33,7 @@ class ViewController: UIViewController, QRCodeReaderViewControllerDelegate, CNCo
         
     }
 
-    // MARK: - QR Tarama
+    
     @objc func startScanning() {
         readerVC.delegate = self
         readerVC.modalPresentationStyle = .fullScreen // Tam ekran yapıyoruz
@@ -53,7 +53,7 @@ class ViewController: UIViewController, QRCodeReaderViewControllerDelegate, CNCo
         reader.dismiss(animated: true, completion: nil)
     }
 
-    // MARK: - Rehber Seçimi
+   
     func pickContact() {
         let picker = CNContactPickerViewController()
         picker.delegate = self
@@ -68,7 +68,7 @@ class ViewController: UIViewController, QRCodeReaderViewControllerDelegate, CNCo
         sendSMS(to: phoneValue.stringValue, body: message)
     }
 
-    // MARK: - SMS Gönderimi
+    
     func sendSMS(to phone: String, body: String) {
         guard MFMessageComposeViewController.canSendText() else {
             let alert = UIAlertController(title: "Hata", message: "Bu cihaz SMS gönderemez.", preferredStyle: .alert)
