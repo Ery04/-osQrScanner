@@ -6,7 +6,7 @@ import MessageUI
 
 class ViewController: UIViewController, QRCodeReaderViewControllerDelegate, CNContactPickerDelegate, MFMessageComposeViewControllerDelegate {
 
-    // QRCodeReader (pod’dan)
+    
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
             $0.reader = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
@@ -18,9 +18,9 @@ class ViewController: UIViewController, QRCodeReaderViewControllerDelegate, CNCo
 
 
     @IBAction func startscanning(_ sender: UIButton) {
-        // QR kod tarayıcı ekranını başlatıyoruz
+        
         readerVC.delegate = self
-        readerVC.modalPresentationStyle = .fullScreen // Tam ekran yapıyoruz
+        readerVC.modalPresentationStyle = .fullScreen 
         present(readerVC, animated: true)
     }
     
